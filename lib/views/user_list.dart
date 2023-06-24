@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:users_crud/components/user_tile.dart';
 import 'package:users_crud/data/dummy_users.dart';
 import 'package:users_crud/providers/users.dart';
+import 'package:users_crud/routes/app_routes.dart';
 
 import '../models/user.dart';
 
@@ -20,11 +21,7 @@ class UserList extends StatelessWidget {
           IconButton(
             icon: Icon(Icons.add),
             onPressed: () {
-              users.put(User(
-                name: 'Teste',
-                email: 'teste@gmail.com',
-                avatarUrl: '',
-              ));
+              Navigator.of(context).pushNamed(AppRoutes.USER_FORM);
             },
           )
         ],
