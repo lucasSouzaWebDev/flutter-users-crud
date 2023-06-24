@@ -4,6 +4,8 @@ import 'package:users_crud/components/user_tile.dart';
 import 'package:users_crud/data/dummy_users.dart';
 import 'package:users_crud/providers/users.dart';
 
+import '../models/user.dart';
+
 class UserList extends StatelessWidget {
   const UserList({super.key});
 
@@ -17,7 +19,13 @@ class UserList extends StatelessWidget {
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.add),
-            onPressed: () {},
+            onPressed: () {
+              users.put(User(
+                name: 'Teste',
+                email: 'teste@gmail.com',
+                avatarUrl: '',
+              ));
+            },
           )
         ],
         backgroundColor: Colors.blue,
