@@ -1,4 +1,3 @@
-import 'dart:js_interop';
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -11,7 +10,7 @@ class UserForm extends StatelessWidget {
   final Map<String, String> _formData = {};
 
   void _loadFormData(User user) {
-    if(user.isNull) {
+    if(user == null) {
       return;
     }
     
